@@ -1,0 +1,53 @@
+{
+  "name": "token-forge",
+  "version": "1.0.0",
+  "description": "Zero-dependency design token transformer with theme variants and watch mode",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "token-forge": "dist/cli.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "npx rimraf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "test": "node dist/cli.js --help",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-tokens",
+    "typescript",
+    "scss",
+    "css-variables",
+    "themes",
+    "dark-mode",
+    "design-system",
+    "tokens",
+    "zero-dependency"
+  ],
+  "author": "Adam Chubbuck <Adam.Chubbuck@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/archubbuck/token-forge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/archubbuck/token-forge/issues"
+  },
+  "homepage": "https://github.com/archubbuck/token-forge#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.0.0"
+  }
+}
