@@ -1,5 +1,5 @@
 {
-  "name": "token-forge",
+  "name": "design-token-transformer",
   "version": "1.0.0",
   "description": "Zero-dependency design token transformer with theme variants and watch mode",
   "main": "dist/index.js",

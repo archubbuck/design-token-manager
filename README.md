@@ -1,4 +1,4 @@
-# Token Forge 🔥
+# Design Token Transformer 🔥
 
 A zero-dependency npm package that transforms JSON design tokens into TypeScript and SCSS files with support for theme variants, token references, and watch mode.
 
@@ -586,9 +586,9 @@ interface ThemeVariant {
 -v, --version         Show version
 ```
 
-## 🤝 Why Token Forge?
+## 🤝 Why Design Token Transformer?
 
-| Feature | Token Forge | style-dictionary | design-tokens |
+| Feature | Design Token Transformer | style-dictionary | design-tokens |
 |---------|-------------|------------------|---------------|
 | Dependencies | 0 | 30+ | 50+ |
 | Theme Variants | ✅ Built-in | ❌ Manual | ❌ Manual |
