@@ -2,7 +2,7 @@
 
 A zero-dependency npm package that transforms JSON design tokens into TypeScript and SCSS files with support for theme variants, token references, and watch mode.
 
-[![npm version](https://badge.fury.io/js/token-forge.svg)](https://www.npmjs.com/package/token-forge)
+[![npm version](https://badge.fury.io/js/token-forge.svg)](https://www.npmjs.com/package/design-token-manager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
