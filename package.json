@@ -1,6 +1,6 @@
 {
   "name": "design-token-manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zero-dependency design token transformer with theme variants and watch mode",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
