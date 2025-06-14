@@ -2,7 +2,7 @@
 
 A zero-dependency npm package that transforms JSON design tokens into TypeScript and SCSS files with support for theme variants, token references, and watch mode.
 
-[![npm version](https://badge.fury.io/js/token-forge.svg)](https://www.npmjs.com/package/design-token-manager)
+[![npm version](https://badge.fury.io/js/design-token-manager.svg)](https://www.npmjs.com/package/design-token-manager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
@@ -20,11 +20,11 @@ A zero-dependency npm package that transforms JSON design tokens into TypeScript
 ## 📦 Installation
 
 ```bash
-npm install token-forge
+npm install design-token-manager
 # or
-yarn add token-forge
+yarn add design-token-manager
 # or
-pnpm add token-forge
+pnpm add design-token-manager
 ```
 
 ## 🚀 Quick Start
@@ -33,19 +33,19 @@ pnpm add token-forge
 
 ```bash
 # Transform a single token file
-npx token-forge transform -i tokens.json -o ./src/tokens
+npx design-token-manager transform -i tokens.json -o ./src/tokens
 
 # Watch for changes during development
-npx token-forge transform -i tokens.json -o ./src/tokens --watch
+npx design-token-manager transform -i tokens.json -o ./src/tokens --watch
 
 # Multiple files with custom prefix
-npx token-forge transform -i "colors.json,spacing.json" -o ./dist --prefix app
+npx design-token-manager transform -i "colors.json,spacing.json" -o ./dist --prefix app
 ```
 
 ### Programmatic Usage
 
 ```typescript
-import { TokenTransformer } from 'token-forge';
+import { TokenTransformer } from 'design-token-manager';
 
 const transformer = new TokenTransformer({
   inputPath: './design-tokens.json',
@@ -108,31 +108,31 @@ Create a `tokens.json` file:
 
 ```bash
 # Basic transformation
-npx token-forge transform -i tokens.json -o ./src/tokens
+npx design-token-manager transform -i tokens.json -o ./src/tokens
 
 # Multiple input files (comma-separated)
-npx token-forge transform -i "colors.json,spacing.json,typography.json" -o ./src/tokens
+npx design-token-manager transform -i "colors.json,spacing.json,typography.json" -o ./src/tokens
 
 # Multiple input files (space-separated)
-npx token-forge transform -i colors.json spacing.json -o ./src/tokens
+npx design-token-manager transform -i colors.json spacing.json -o ./src/tokens
 
 # With custom prefix
-npx token-forge transform -i tokens.json -o ./src/tokens --prefix app
+npx design-token-manager transform -i tokens.json -o ./src/tokens --prefix app
 
 # Watch mode for development
-npx token-forge transform -i tokens.json -o ./src/tokens --watch
+npx design-token-manager transform -i tokens.json -o ./src/tokens --watch
 
 # Skip TypeScript generation
-npx token-forge transform -i tokens.json -o ./src/tokens --no-typescript
+npx design-token-manager transform -i tokens.json -o ./src/tokens --no-typescript
 
 # Skip SCSS generation
-npx token-forge transform -i tokens.json -o ./src/tokens --no-scss
+npx design-token-manager transform -i tokens.json -o ./src/tokens --no-scss
 
 # Show help
-npx token-forge --help
+npx design-token-manager --help
 
 # Show version
-npx token-forge --version
+npx design-token-manager --version
 ```
 
 ### 3. Programmatic API Examples
@@ -140,7 +140,7 @@ npx token-forge --version
 #### Basic Usage
 
 ```typescript
-import { TokenTransformer } from 'token-forge';
+import { TokenTransformer } from 'design-token-manager';
 
 const transformer = new TokenTransformer({
   inputPath: './tokens.json',
@@ -156,7 +156,7 @@ await transformer.transform();
 #### Multiple Input Files
 
 ```typescript
-import { TokenTransformer } from 'token-forge';
+import { TokenTransformer } from 'design-token-manager';
 
 const transformer = new TokenTransformer({
   inputPath: [
@@ -175,7 +175,7 @@ await transformer.transform();
 #### Watch Mode
 
 ```typescript
-import { TokenTransformer } from 'token-forge';
+import { TokenTransformer } from 'design-token-manager';
 
 const transformer = new TokenTransformer({
   inputPath: './tokens.json',
@@ -190,7 +190,7 @@ await transformer.startWatching();
 #### Theme Variants
 
 ```typescript
-import { TokenTransformer } from 'token-forge';
+import { TokenTransformer } from 'design-token-manager';
 
 const transformer = new TokenTransformer({
   inputPath: './base-tokens.json',
@@ -230,7 +230,7 @@ await transformer.transform();
 #### Using Individual Functions
 
 ```typescript
-import { generateTypeScriptTokens, generateScssTokens } from 'token-forge';
+import { generateTypeScriptTokens, generateScssTokens } from 'design-token-manager';
 import fs from 'fs';
 
 // Load your tokens
@@ -348,7 +348,7 @@ Organize your tokens across multiple files:
 
 Then merge them:
 ```bash
-npx token-forge transform -i "colors.json,spacing.json,components.json" -o ./tokens
+npx design-token-manager transform -i "colors.json,spacing.json,components.json" -o ./tokens
 ```
 
 ## 📤 Generated Output
@@ -531,8 +531,8 @@ const darkTokens = themes.dark;
 ```json
 {
   "scripts": {
-    "tokens": "token-forge transform -i tokens.json -o ./src/tokens",
-    "tokens:watch": "token-forge transform -i tokens.json -o ./src/tokens --watch",
+    "tokens": "design-token-manager transform -i tokens.json -o ./src/tokens",
+    "tokens:watch": "design-token-manager transform -i tokens.json -o ./src/tokens --watch",
     "build": "npm run tokens && next build",
     "dev": "concurrently \"npm run tokens:watch\" \"next dev\""
   }
@@ -544,7 +544,7 @@ const darkTokens = themes.dark;
 ```json
 {
   "scripts": {
-    "tokens": "token-forge transform -i \"tokens/colors.json,tokens/spacing.json,tokens/typography.json\" -o ./src/design-system --prefix ds",
+    "tokens": "design-token-manager transform -i \"tokens/colors.json,tokens/spacing.json,tokens/typography.json\" -o ./src/design-system --prefix ds",
     "tokens:watch": "npm run tokens -- --watch"
   }
 }
@@ -600,7 +600,7 @@ interface ThemeVariant {
 
 ## 📄 License
 
-MIT © [Your Name](https://github.com/yourusername/token-forge)
+MIT © [Your Name](https://github.com/yourusername/design-token-manager)
 
 ## 🤝 Contributing
 
@@ -608,7 +608,7 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 
 ## 🐛 Issues
 
-Found a bug or have a feature request? Please [open an issue](https://github.com/yourusername/token-forge/issues).
+Found a bug or have a feature request? Please [open an issue](https://github.com/yourusername/design-token-manager/issues).
 
 ---
 
